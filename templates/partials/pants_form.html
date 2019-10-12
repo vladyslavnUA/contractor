@@ -1,0 +1,42 @@
+<form method='POST' action='/pants'>
+    <fieldset>
+    <legend>{{ title }}</legend>
+    <!-- pant color-->
+    <p>
+        <label for='pants_name'>pant color</label><br>
+        <input id="pants_name" type='text' name='pants_name' required/>
+    </p>
+
+    <!-- Description -->
+    <p>
+        <label for='description'>Description</label><br>
+        <input id ="description" type='text' name='description' required/>
+    </p>
+
+    <!-- Price -->
+    <p>
+        <label for='price'>Price</label><br>
+        <input id="price" type='number' name='price' required/>
+    </p>
+
+    <!-- color -->
+    <p>
+        <label for='color'>color</label><br>
+        <input  type='radio' name='color' value= "pink"/required> pink
+        <input  type='radio' name='color' value= "purple"/requiredrequired> purple
+        <input  type='radio' name='color' value= "white"/required> white
+        <input  type='radio' name='color' value= "red"/requiredrequired> red
+
+    </p>
+
+
+
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button class="btn btn-primary" type='submit'>Save pant</button>
+        <!-- Cancel button -->
+        <!-- <button><a href="">Cancel</a></button> -->
+    </p>
+</form>

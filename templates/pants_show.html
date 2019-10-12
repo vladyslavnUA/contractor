@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<a href='/'>Back to Home</a>
+
+<div class="row">
+	<div class="col-sm-6 col-sm-offset-3">
+
+		<!-- pant Name -->
+		<h1>{{ pant.pant_name }}</h1>
+
+		<!-- pant Picture -->
+		<div class="card"><div class="card-body">
+			<img width="300"  height="300" src="/static/{{pant.color}}.png">
+		</div></div>
+
+		<!-- Description of the pant -->
+		<h2>{{ pant.description }}</h2>
+
+		<!-- pant Price -->
+		<h2>${{ pant.price}}</h2>
+
+
+		<p><a href="/pants/{{ pant._id }}/edit"><button  class="btn btn-primary">Edit</button></a></p>
+		<p><form method="POST" action="/pants/{{pant._id}}/delete">
+			<input type='hidden' name='_method' value='DELETE'>
+
+			<button class="btn btn-primary" type="submit">Delete</button>
+		</form></p>
+	</div>
+</div>
+{% endblock %}

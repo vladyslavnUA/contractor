@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- <h1>Tasty pants</h1> -->
+
+    <!-- <a href="/pants/new">Add a pant</a> -->
+<div class="row">
+    {% for pant in pants %}
+		<div class="col-md-3">
+	        <h2><a href="/pants/{{pant._id}}">{{ pant.color }}</a></h2>
+ 	            <img width="240" height="240" src="/static/{{pant.color}}.png">
+
+ 	        <p>${{ pant.price }}</p>
+	    </div>
+    {% endfor %}
+</div>
+{% endblock %}
